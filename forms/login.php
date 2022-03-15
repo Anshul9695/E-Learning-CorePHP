@@ -20,18 +20,18 @@ include_once('../header.php');
 
 <div class="col-sm-4">
     <div class="login-form">
-<form>
+<form action="login_process.php" method="POST">
   <div class="form-group">
     <label for="exampleInputEmail1">Email or Username</label>
-    <input type="email" class="form-control"  placeholder="Enter email or username">
+    <input type="text" class="form-control" name="login_var"  placeholder="Enter email or username">
  
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control"  placeholder="Enter Password">
+    <input type="password" class="form-control" name="password" placeholder="Enter Password">
   </div>
  
-  <button type="submit" class="form_btn btn btn-primary">Login</button>
+  <button type="submit" class="form_btn btn btn-primary" name="login">Login</button>
 </form>
 </div>
 </div>

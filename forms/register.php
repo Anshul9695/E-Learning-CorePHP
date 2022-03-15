@@ -62,7 +62,7 @@ if(!preg_match("/^([a-zA-Z' ]+)$/",$lname)){
                       $error[]='email is Invalid';
                 }
 
-                $sql="select * from register where(username='$username' or email='$email')";
+                $sql="select * from register where(username='$username' or email='$email' or phone='$phone')";
                 $res=mysqli_query($conn,$sql);
                 // print_r($sql);
                 // die('getting query');
@@ -74,6 +74,9 @@ if(!preg_match("/^([a-zA-Z' ]+)$/",$lname)){
                     }
                     if($email==$row['email']){
                         $error[]='email already exist';
+                    }
+                    if($phone==$row['phone']){
+                        $error[]='This phone number is already Exist';
                     }
                 }
                 //password confirmation and password checking
